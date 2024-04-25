@@ -12,7 +12,7 @@ private:
     deque* tail;
 
 public:
-    //int& operator[](int);
+    int& operator[](int);
     Deque();
     ~Deque();
     void Add_front(int value);
@@ -23,6 +23,7 @@ public:
     int ShowHead();
     int ShowTail();
     bool IsEmpty();
+    int temp();
     //void Sort();
 };
 

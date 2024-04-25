@@ -113,6 +113,19 @@ int Deque::ShowTail() {
     else return -1;
 }
 
+int &Deque::operator[](int index) {
+    int cur_index = 0;
+    deque* tmp = head;
+    int value = 0;
+    while(tmp) {
+        if(cur_index==index) {
+            return tmp->value;
+        }
+        tmp = tmp->next;
+        cur_index++;
+    }
+    exit(-1);
+}
 
 
 

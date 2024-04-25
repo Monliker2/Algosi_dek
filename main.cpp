@@ -13,7 +13,11 @@ int main()
     deq.Add_back(3);
     deq.Add_back(4);
 
+
+
     deq.ShowAll();
+    cout<<deq[2]<<endl;
+
     cout << "Head of deq: " << deq.ShowHead() << endl;
     cout << "Tail of deq: " << deq.ShowTail() << endl;
 
