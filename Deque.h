@@ -21,13 +21,12 @@ public:
     int ShowHead();
     int ShowTail();
     bool IsEmpty();
-    //int temp();
-    //void Sort();
 };
 
 class Deque_with_sort : public Deque{
 public:
-    int operator[](int);
+    int GetValue(int index);
+    void SetValue(int index, int value);
     void sort();
 };
 

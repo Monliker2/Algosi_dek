@@ -52,8 +52,9 @@ bool Deque::IsEmpty() {
 
 int Deque::Del_front() {
     if(IsEmpty()) {
+        int special_value = 0;
         cout<<"Deque is empty"<<endl;
-        return -1;
+        return special_value;
     }
     deque* tmp = head;
     int ret = tmp->value;
@@ -70,8 +71,9 @@ int Deque::Del_front() {
 
 int Deque::Del_back() {
     if(IsEmpty()) {
+        int special_value = 0;
         cout<<"Deque is empty"<<endl;
-        return -1;
+        return special_value;
     }
     deque* tmp = tail;
     int ret = tmp->value;
