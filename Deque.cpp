@@ -100,11 +100,17 @@ void Deque::ShowAll() {
 }
 
 int Deque::ShowHead() {
-    return head->value;
+    if (head != nullptr) {
+        return head->value;
+    }
+    else return -1;
 }
 
 int Deque::ShowTail() {
-    return tail->value;
+    if (tail != nullptr) {
+        return tail->value;
+    }
+    else return -1;
 }
 
 
