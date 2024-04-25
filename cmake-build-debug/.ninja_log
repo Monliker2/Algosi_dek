@@ -1,0 +1,5 @@
+# ninja log v5
+502	597	1714036249988737360	Algosi_dek	8fce2aeeaa4ccfc1
+0	34	1714041426190015286	build.ninja	39cfd3e45d1fe632
+1	478	1714036080237720628	CMakeFiles/Algosi_dek.dir/main.cpp.o	7b742f39d4a211c6
+2	502	1714036249892735671	CMakeFiles/Algosi_dek.dir/Deque.cpp.o	753d7cd193069f54
