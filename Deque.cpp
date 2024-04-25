@@ -7,6 +7,7 @@ Deque::Deque() {
     head = nullptr;
     tail = nullptr;
 }
+
 Deque::~Deque() {
     deque* tmp;
     while (head != nullptr) {
@@ -21,7 +22,6 @@ void Deque::Add_front(int value) {
     deque* tmp = new deque;
     tmp->value = value;
     tmp->prev = nullptr;
-
     if (head == nullptr) {
         head = tail = tmp;
         tmp->next = nullptr;
@@ -36,7 +36,6 @@ void Deque::Add_back(int value) {
     deque* tmp = new deque;
     tmp->value = value;
     tmp->next = nullptr;
-
     if (tail == nullptr) {
         head = tail = tmp;
         tmp->prev = nullptr;
@@ -113,19 +112,6 @@ int Deque::ShowTail() {
     else return -1;
 }
 
-int &Deque::operator[](int index) {
-    int cur_index = 0;
-    deque* tmp = head;
-    int value = 0;
-    while(tmp) {
-        if(cur_index==index) {
-            return tmp->value;
-        }
-        tmp = tmp->next;
-        cur_index++;
-    }
-    exit(13);
-}
 
 
 

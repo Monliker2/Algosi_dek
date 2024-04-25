@@ -1,11 +1,9 @@
 #include <iostream>
-#include <ctime>
-#include <stdlib.h>
 #include "Deque.h"
 using namespace std;
 
 void test() {
-    Deque deq;
+    Deque_with_sort deq;
 
     for(int i=0; i<100;i++) {
         deq.Add_front(i);
@@ -39,7 +37,18 @@ void test() {
 
 int main()
 {
-    test();
+    //test();
+
+    Deque_with_sort deq;
+
+    for(int i=0; i < 100;i++) {
+        deq.Add_back(i+1);
+    }
+    deq.ShowAll();
+
+    for(int i=0; i < 100;i++) {
+        cout<<deq[i]<<' ';
+    }
 
     return 0;
 }

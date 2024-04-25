@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Algosi_dek main.cpp
         Deque.h
-        Deque.cpp)
+        Deque.cpp
+        Deque_with_sort.cpp)

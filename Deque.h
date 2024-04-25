@@ -10,9 +10,7 @@ private:
     };
     deque* head;
     deque* tail;
-
 public:
-    int& operator[](int);
     Deque();
     ~Deque();
     void Add_front(int value);
@@ -23,10 +21,15 @@ public:
     int ShowHead();
     int ShowTail();
     bool IsEmpty();
-    int temp();
+    //int temp();
     //void Sort();
 };
 
+class Deque_with_sort : public Deque{
+public:
+    int operator[](int);
+    void sort();
+};
 
 
 
