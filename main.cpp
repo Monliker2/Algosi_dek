@@ -3,53 +3,54 @@
 #include <vector>
 using namespace std;
 
+void quick_sort(Deque_with_sort& array, int low, int high)
+{
+    int i = low;
+    int j = high;
+    int pivot = array[(i + j) / 2];
+    int temp;
 
-
-int partition(Deque_with_sort& arr, int low, int high) {
-    int pivot = arr[(low + high) / 2];
-    int i = low - 1;
-
-    for (int j = low; j <= high; j++) {
-        if (arr[j] < pivot) {
+    while (i <= j)
+    {
+        while (array[i] < pivot)
             i++;
-            swap(arr[i], arr[j]);
+        while (array[j] > pivot)
+            j--;
+        if (i <= j)
+        {
+            temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+            i++;
+            j--;
         }
     }
-
-    return i + 1;
+    if (j > low)
+        quick_sort(array, low, j);
+    if (i < high)
+        quick_sort(array, i, high);
 }
-
-void quicksort(Deque_with_sort& arr, int low, int high) {
-    if (low < high) {
-        int pi = partition(arr, low, high);
-
-        quicksort(arr, low, pi - 1);
-        quicksort(arr, pi + 1, high);
-    }
-}
-
 
 int main()
 {
     //test();
+    int size = 100;
 
     Deque_with_sort deq;
     srand(time(0));
 
-    for(int i=0; i < 5;i++) {
-        deq.Add_back(i);
+    for(int i=0; i < size;i++) {
+        deq.Add_back(rand()%100);
     }
 
-    deq[0] = 100;
+
     deq.ShowAll();
 
-    quicksort(deq, 0, 4);
+    quick_sort(deq, 0, size-1);
 
-    for(int i=0; i < 5;i++) {
+    for(int i=0; i < size;i++) {
         cout<<deq[i]<<' ';
     }
-
-    cout<<endl<<(deq[1]>deq[2])<<endl;
 
     return 0;
 }
