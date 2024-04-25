@@ -124,7 +124,7 @@ int &Deque::operator[](int index) {
         tmp = tmp->next;
         cur_index++;
     }
-    exit(-1);
+    exit(13);
 }
 
 

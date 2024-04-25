@@ -4,32 +4,43 @@
 #include "Deque.h"
 using namespace std;
 
-int main()
-{
+void test() {
     Deque deq;
 
-    deq.Add_front(1);
-    deq.Add_front(2);
-    deq.Add_back(3);
-    deq.Add_back(4);
+    for(int i=0; i<100;i++) {
+        deq.Add_front(i);
+    }
 
+    for(int i=0; i<100;i++) {
+        cout<<deq[i]<<' ';
+    }
+    cout<<endl;
 
+    for(int i=0; i<100;i++) {
+        cout<<deq.Del_front()<<' ';
+    }
+    cout<<endl;
 
-    deq.ShowAll();
-    cout<<deq[2]<<endl;
+    for(int i=0; i<100;i++) {
+        deq.Add_back(i);
+    }
+    cout<<endl;
 
-    cout << "Head of deq: " << deq.ShowHead() << endl;
-    cout << "Tail of deq: " << deq.ShowTail() << endl;
+    for(int i=0; i<100;i++) {
+        cout<<deq[i]<<' ';
+    }
+    cout<<endl;
 
-    cout << "Deleted front element: " << deq.Del_front() << endl;
-    cout << "Deleted back element: " << deq.Del_back() << endl;
-    cout << "Deleted back element: " << deq.Del_back() << endl;
-    cout << "Deleted back element: " << deq.Del_front() << endl;
+    for(int i=0; i<100;i++) {
+        cout<<deq.Del_back()<<' ';
+    }
+    cout<<endl;
+}
 
+int main()
+{
+    test();
 
-    cout << "deq elements after deletion: ";
-    deq.ShowAll();
-    cout << "Head of deq: " << deq.ShowHead() << endl;
-    cout << "Tail of deq: " << deq.ShowTail() << endl;
     return 0;
 }
+
