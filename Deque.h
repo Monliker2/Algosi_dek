@@ -13,8 +13,8 @@ private:
 public:
     Deque();
     ~Deque();
-    void Add_front(int value);
-    void Add_back(int value);
+    int* Add_front(int value);
+    int* Add_back(int value);
     int Del_front();
     int Del_back();
     void ShowAll();
@@ -25,8 +25,9 @@ public:
 
 class Deque_with_sort : public Deque{
 public:
-    int GetValue(int index);
-    void SetValue(int index, int value);
+    // int GetValue(int index);
+    // void SetValue(int index, int value);
+    int& operator[](int index);
     void sort();
 };
 

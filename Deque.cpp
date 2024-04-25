@@ -18,9 +18,11 @@ Deque::~Deque() {
 
 }
 
-void Deque::Add_front(int value) {
+int* Deque::Add_front(int value) {
     deque* tmp = new deque;
     tmp->value = value;
+    int* p = &tmp->value;
+
     tmp->prev = nullptr;
     if (head == nullptr) {
         head = tail = tmp;
@@ -30,20 +32,25 @@ void Deque::Add_front(int value) {
         head->prev = tmp;
         head = tmp;
     }
+    return p;
 }
 
-void Deque::Add_back(int value) {
+int* Deque::Add_back(int value) {
     deque* tmp = new deque;
     tmp->value = value;
+    int* p = &value;
     tmp->next = nullptr;
     if (tail == nullptr) {
         head = tail = tmp;
+         p = &head->value;
         tmp->prev = nullptr;
     } else {
         tmp->prev = tail;
         tail->next = tmp;
         tail = tmp;
+        p = &tail->value;
     }
+    return p;
 }
 
 bool Deque::IsEmpty() {
@@ -65,7 +72,7 @@ int Deque::Del_front() {
         head = head->next;
         head->prev = nullptr;
     }
-    delete tmp;
+    //delete tmp;
     return ret;
 }
 
@@ -84,7 +91,7 @@ int Deque::Del_back() {
         tail = tail->prev;
         tail->next = nullptr;
     }
-    delete tmp;
+    //delete tmp;
     return ret;
 }
 
@@ -98,6 +105,7 @@ void Deque::ShowAll() {
         tmp = tmp->next;
     }
     cout<<endl;
+    delete tmp;
 }
 
 int Deque::ShowHead() {
