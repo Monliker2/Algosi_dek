@@ -1,0 +1,14 @@
+# ninja log v5
+0	16	1715063493550521585	build.ninja	cf08d5bbb66e1e99
+0	167	1715063171618038751	CMakeFiles/Algosi_Deque.dir/Deque.cpp.o	af6dd2e1f818203e
+0	146	1715063372680828844	CMakeFiles/Algosi_Deque.dir/main.cpp.o	f3cb3080f31ef259
+167	201	1715063171654039245	Algosi_Deque	5fc1c7c39680d67a
+0	165	1715063171614038697	CMakeFiles/Algosi_Deque.dir/Deque_with_sort.cpp.o	7a20423bc3aa3ab2
+0	16	1715063493550521585	build.ninja	cf08d5bbb66e1e99
+0	164	1715063493718523941	CMakeFiles/Algosi_Deque.dir/main.cpp.o	f3cb3080f31ef259
+0	175	1715063493734524166	CMakeFiles/Algosi_Deque.dir/Deque.cpp.o	af6dd2e1f818203e
+0	150	1715063509246741721	CMakeFiles/Algosi_Deque.dir/Deque_with_sort.cpp.o	7a20423bc3aa3ab2
+1	148	1715063538019145364	CMakeFiles/Algosi_Deque.dir/Deque.cpp.o	af6dd2e1f818203e
+148	180	1715063538047145757	Algosi_Deque	5fc1c7c39680d67a
+0	155	1715063552071342549	CMakeFiles/Algosi_Deque.dir/main.cpp.o	f3cb3080f31ef259
+155	187	1715063552103342998	Algosi_Deque	5fc1c7c39680d67a
