@@ -24,10 +24,13 @@ public:
 };
 
 class Deque_with_sort : public Deque{
+private:
+    void swap(int a, int b);
+    int partition(int low, int high);
 public:
     int GetValue(int index);
     void SetValue(int index, int value);
-    //void sort();
+    void QuickSort(int low, int high);
 };
 
 
