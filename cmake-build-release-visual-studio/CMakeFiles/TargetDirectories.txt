@@ -1,0 +1,3 @@
+C:/Users/zheni/CLionProjects/Algosi_dek/cmake-build-release-visual-studio/CMakeFiles/Algosi_Deque.dir
+C:/Users/zheni/CLionProjects/Algosi_dek/cmake-build-release-visual-studio/CMakeFiles/edit_cache.dir
+C:/Users/zheni/CLionProjects/Algosi_dek/cmake-build-release-visual-studio/CMakeFiles/rebuild_cache.dir

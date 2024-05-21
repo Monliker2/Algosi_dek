@@ -33,6 +33,4 @@ public:
     void QuickSort(int low, int high);
 };
 
-
-
 #endif //DEQUE_H

@@ -36,13 +36,12 @@ using namespace std;
 
 int main()
 {
-    //test();
 
     Deque_with_sort t;
     srand(time(0));
     for(int i=0; i < 10;i++) {
-        t.Add_back(i);
-        //t.Add_back(rand() % 10);
+        //t.Add_back(i);
+        t.Add_back(rand() % 10);
     }
     for(int i=0; i < 10;i++) {
         cout<<t.GetValue(i)<<' ';
@@ -54,9 +53,7 @@ int main()
     for(int i=0; i < 10;i++) {
         cout<<t.GetValue(i)<<' ';
     }
-
-
-
+    cout << "\n";
 
     int key[5000];
     for (int i = 0; i != 5000; ++i) {
@@ -75,8 +72,8 @@ int main()
         auto start = std::chrono::high_resolution_clock::now();
         deque.QuickSort(0, n-1);
         auto end = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double> elapsed = end - start;
-        cout << "Sorting " << n << " elements take: " << elapsed.count() * 1000 << " ms\n";
+        std::chrono::duration<double> time = end - start;
+        cout << "Sorting " << n << " elements take: " << time.count() * 1000 << " ms\n";
 
     }
     return 0;
