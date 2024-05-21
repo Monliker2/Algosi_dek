@@ -42,12 +42,12 @@ void Deque_with_sort::swap(int a, int b) {
     SetValue(b, v_a);
 }
 
-int Deque_with_sort::partition(int low, int high) {
-    int pivot = GetValue(high);
+int Deque_with_sort::pivot(int low, int high) {
+    int pi = GetValue(high);
     int i = low - 1;
 
     for (int j = low; j <= high - 1; j++) {
-        if (GetValue(j) <= pivot) {
+        if (GetValue(j) <= pi) {
             i++;
             swap(i, j);
         }
@@ -58,8 +58,8 @@ int Deque_with_sort::partition(int low, int high) {
 
 void Deque_with_sort::QuickSort(int low, int high) {
     if (low < high) {
-        int pi = partition(low, high);
-        QuickSort(low, pi - 1);
-        QuickSort(pi + 1, high);
+        int piv = pivot(low, high);
+        QuickSort(low, piv - 1);
+        QuickSort(piv + 1, high);
     }
 }

@@ -69,11 +69,16 @@ int main()
         }
         cout << "\n";
 
-        auto start = std::chrono::high_resolution_clock::now();
+        typedef std::chrono::high_resolution_clock Time;
+        typedef std::chrono::milliseconds ms;
+
+        auto t0 = Time::now();
         deque.QuickSort(0, n-1);
-        auto end = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double> time = end - start;
-        cout << "Sorting " << n << " elements take: " << time.count() * 1000 << " ms\n";
+        auto t1 = Time::now();
+
+        ms time = std::chrono::duration_cast<ms>(t1 - t0);
+
+        cout << "Sorting " << n << " elements take: " << time.count() << " ms\n";
 
     }
     return 0;
