@@ -25,6 +25,7 @@ void Deque::Add_front(int value) { // 8
     if (head == nullptr) { // 1+3
         head = tail = tmp; // 2
         tmp->next = nullptr; // 1
+
     } else {
         tmp->next = head; // 1
         head->prev = tmp; // 1
@@ -113,6 +114,7 @@ int Deque::ShowTail() {
     }
     else return -1;
 }
+
 
 
 

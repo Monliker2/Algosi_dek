@@ -49,8 +49,8 @@ int main()
 
         ms time = std::chrono::duration_cast<ms>(t1 - t0);
 
-        cout << "Sorting " << n << " elements take: " << time.count() << " ms\n";
-
+        cout << "Sorting " << n << " elements take: " << time.count() << " ms   N_op = "<<deque.ReturnN_op();
+        deque.ClearN_op();
     }
     return 0;
 }

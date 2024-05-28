@@ -21,16 +21,20 @@ public:
     int ShowHead();
     int ShowTail();
     bool IsEmpty();
+    int ShowN_op();
 };
 
 class Deque_with_sort : public Deque{
 private:
     void swap(int a, int b);
     int pivot(int low, int high);
+    int N_op;
 public:
     int GetValue(int index);
     void SetValue(int index, int value);
     void QuickSort(int low, int high);
+    unsigned long long ReturnN_op();
+    void ClearN_op();
 };
 
 #endif //DEQUE_H
