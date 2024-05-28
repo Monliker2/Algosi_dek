@@ -1,5 +1,4 @@
 #include "Deque.h"
-#include <iostream>
 
 int Deque_with_sort::GetValue(int index) { // 26 + 42n
     Deque_with_sort tmp;
@@ -34,32 +33,33 @@ void Deque_with_sort::SetValue(int index, int value) { // 14 + 42n
     }
 }
 
-void Deque_with_sort::swap(int a, int b) {
-    int v_a = GetValue(a);
-    int v_b = GetValue(b);
+void Deque_with_sort::swap(int a, int b) { // 106 + 168n
+    int v_a = GetValue(a); // 2 + 26 + 42n = 27 + 42n
+    int v_b = GetValue(b); // 27 + 42n
 
-    SetValue(a, v_b);
-    SetValue(b, v_a);
+    SetValue(a, v_b); // 2 + 14 + 42n = 26 + 42n
+    SetValue(b, v_a); // 26 + 42n
 }
 
-int Deque_with_sort::pivot(int low, int high) {
-    int pi = GetValue(high);
-    int i = low - 1;
+int Deque_with_sort::pivot(int low, int high) { // 144 + 350n + 210n^2
+    int pi = GetValue(high); // 28 + 42n
+    int i = low - 1; // 2
 
-    for (int j = low; j <= high - 1; j++) {
-        if (GetValue(j) <= pi) {
-            i++;
-            swap(i, j);
+    for (int j = low; j <= high - 1; j++) { // 3 + ∑_1^(n)▒〖(140 + 210n)〗 = 3 + 140n +210n^2
+        if (GetValue(j) <= pi) { // 28 + 42n
+            i++; // 1
+            swap(i, j); // 108 + 168n
         }
     }
-    swap(i + 1, high);
-    return i + 1;
+    swap(i + 1, high); // 109 + 168n
+    return i + 1; // 2
 }
 
-void Deque_with_sort::QuickSort(int low, int high) {
-    if (low < high) {
-        int piv = pivot(low, high);
+void Deque_with_sort::QuickSort(int low, int high) { // ∑_1^(2n-1)▒〖(148 + 350n + 210n^2)〗 = 420n^3 + 490n^2 - 54n - 148
+    if (low < high) { // 1
+        int piv = pivot(low, high); // 147 + 350n + 210n^2
         QuickSort(low, piv - 1);
         QuickSort(piv + 1, high);
+
     }
 }

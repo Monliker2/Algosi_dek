@@ -5,35 +5,6 @@
 using namespace std;
 
 
-
-/*void quick_sort(Deque_with_sort& array, int low, int high)
-{
-    int i = low; // 1
-    int j = high; // 1
-    int pivot = array.GetValue((i + j) / 2); // 2 + 1 + 26 + 42 * ((i + j) / 2)
-    int temp;
-
-    while (i <= j) // 1 + ∑_1^n▒〖(1 + )〗
-    {
-        while (array.GetValue(i) < pivot)
-            i++;
-        while (array.GetValue(j) > pivot)
-            j--;
-        if (i <= j)
-        {
-            temp = array.GetValue(i);
-            array.SetValue(i, array.GetValue(j));
-            array.SetValue(j, temp);
-            i++;
-            j--;
-        }
-    }
-    if (j > low)
-        quick_sort(array, low, j);
-    if (i < high)
-        quick_sort(array, i, high);
-}*/
-
 int main()
 {
 
