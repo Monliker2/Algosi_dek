@@ -33,7 +33,7 @@ public:
     int GetValue(int index);
     void SetValue(int index, int value);
     void QuickSort(int low, int high);
-    unsigned long long ReturnN_op();
+    unsigned long long int ReturnN_op();
     void ClearN_op();
 };
 

@@ -1,9 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include "Deque.h"
-
 using namespace std;
-
 
 int main()
 {
@@ -26,12 +24,12 @@ int main()
     }
     cout << "\n";
 
-    int key[5000];
-    for (int i = 0; i != 5000; ++i) {
-        key[i] = rand() % 5000;
+    int key[1000];
+    for (int i = 0; i != 1000; ++i) {
+        key[i] = rand() % 1000;
     }
     //int n = 100;
-    for(int n = 500; n<=5000; n+=500){
+    for(int n = 100; n<=1000; n+=100){
 
         Deque_with_sort deque;
 
@@ -42,7 +40,7 @@ int main()
 
         typedef std::chrono::high_resolution_clock Time;
         typedef std::chrono::milliseconds ms;
-
+        deque.ClearN_op();
         auto t0 = Time::now();
         deque.QuickSort(0, n-1);
         auto t1 = Time::now();
